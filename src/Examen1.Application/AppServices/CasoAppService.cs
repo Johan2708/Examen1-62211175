@@ -1,4 +1,5 @@
 using Volo.Abp.Application.Services;
+using Volo.Abp.Application.Dtos;
 using Examen1_62211175.Domain.Entities;
 using Examen1_62211175.Application.Contracts.Dtos;
 using Volo.Abp.Domain.Repositories;
@@ -35,7 +36,7 @@ namespace Examen1_62211175.Application.Services
         public async Task CambiarEstadoAsync(Guid casoId, int nuevoEstado)
         {
             var caso = await _casoRepository.GetAsync(casoId);
-            caso.Estado = (EstadoCaso)nuevoEstado;
+            caso.Estado = (CasoEstado)nuevoEstado;
             await _casoRepository.UpdateAsync(caso);
         }
 

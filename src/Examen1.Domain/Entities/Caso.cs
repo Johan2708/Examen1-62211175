@@ -29,6 +29,6 @@ namespace Examen1_62211175.Domain.Entities
         public CasoTipo Tipo { get; set; }
         public CasoEstado Estado { get; set; }
 
-        public virtual ICollection<Comentario> Comentarios { get; set; }
+        public virtual ICollection<Comentario> Comentarios { get; set; } = new List<Comentario>();
     }
 }

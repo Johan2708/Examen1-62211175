@@ -7,7 +7,7 @@ namespace Examen1_62211175.Domain.Entities
     {
         public Guid CasoId { get; set; }
         public virtual Caso Caso { get; set; }
-
         public string Texto { get; set; }
+        public DateTime Fecha { get; set; } 
     }
 }
